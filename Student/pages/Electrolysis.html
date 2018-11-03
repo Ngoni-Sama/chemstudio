@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Chem Studio | Titration </title>
+
+
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+<!-- <link rel='stylesheet' href='inorganic-chemistry-virtual-lab-master/src/lab/template/assets/css/fonts.googleapis.css'>
+<link rel="stylesheet" href="inorganic-chemistry-virtual-lab-master/src/lab/template/bower_components/angular-material/angular-material.css"/>
+<link rel="stylesheet" href="inorganic-chemistry-virtual-lab-master/src/lab/template/assets/css/app.css"/>
+<link rel="stylesheet" href="inorganic-chemistry-virtual-lab-master/src/lab/Acid_Base_Titration/css/experiment.css"/>
+<script src="inorganic-chemistry-virtual-lab-master/src/lab/template/js/createjs-2013.12.12.min.js"></script>
+<script src="inorganic-chemistry-virtual-lab-master/src/lab/template/bower_components/angular/angular.js"></script>
+<script src="inorganic-chemistry-virtual-lab-master/src/lab/template/bower_components/angular-animate/angular-animate.js"></script>
+<script src="inorganic-chemistry-virtual-lab-master/src/lab/template/bower_components/angular-aria/angular-aria.js"></script>
+<script src="inorganic-chemistry-virtual-lab-master/src/lab/template/bower_components/angular-fullscreen/angular-fullscreen.js"></script>
+<script src="inorganic-chemistry-virtual-lab-master/src/lab/template/js/Gettext.js"></script>
+<script type="text/javascript" src="inorganic-chemistry-virtual-lab-master/src/lab/template/bower_components/angular-material/angular-material.js"></script>
+<script src="inorganic-chemistry-virtual-lab-master/src/lab/template/js/getlanguage.js"></script>
+<script src="inorganic-chemistry-virtual-lab-master/src/lab/Acid_Base_Titration/src/user_controller.js"></script>
+<script src="inorganic-chemistry-virtual-lab-master/src/lab/Acid_Base_Titration/src/view.js"></script>
+<script src="inorganic-chemistry-virtual-lab-master/src/lab/Acid_Base_Titration/src/experiment.js"></script>
+<script type="text/javascript">
+    angular
+    .module('starterApp', ['ngMaterial','users'])
+    .config(function($mdThemingProvider, $mdIconProvider){
+        $mdIconProvider
+            .icon("menu"       , "inorganic-chemistry-virtual-lab-master/src/lab/template/assets/svg/menu.svg"        , 24)
+            .icon("fullscreen"       , "inorganic-chemistry-virtual-lab-master/src/lab/template/assets/icons/Icon3.svg", 24)
+            .icon("help"      , "inorganic-chemistry-virtual-lab-master/src/lab/template/assets/icons/Icon2.svg", 24);
+            $mdThemingProvider.theme('default')
+                .primaryPalette('blue')
+                .accentPalette('red');
+    });
+</script> -->
+
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.7 -->
+  <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../../bower_components/font-awesome/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="../../bower_components/Ionicons/css/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../../dist/css/AdminLTE.min.css">
+  <!-- AdminLTE Skins. Choose a skin from the css/skins
+   folder instead of downloading all of them to reduce the load. -->
+   <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
+   <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet"> 
+
+   <style>
+     html, body, h1{
+      font-family:'Comfortaa', 'Roboto' !important;
+     }
+   </style>
+
+   
+
+<!-- Google Font -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+</head>
+<!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
+<body class="hold-transition skin-blue layout-top-nav" ng-app="starterApp" ng-controller="UserController as ul">
+  <div class="wrapper">
+
+    <header class="main-header">
+      <nav class="navbar navbar-static-top" style="background: linear-gradient(-45deg, #a8c7f4 1%,#003c93 100%);">
+        <div class="container">
+          <div class="navbar-header">
+
+           <!-- Sidebar toggle button-->
+           <!-- <a href="#" class="sidebar-toggle blue" data-toggle="push-menu" role="button">
+            <span class="sr-only">Toggle navigation</span>
+          </a> -->
+
+          <a href="../../index.html" class="navbar-brand"><b>Chem</b>Studio</a>
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+            <i class="fa fa-bars"></i>
+          </button>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+          <ul class="nav navbar-nav">
+           
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Titration type <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#">Acid-base Titrations</a></li>
+                <li><a href="#">Redox Titrations</a></li>
+                <li><a href="#">Precipitation Titration</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Complexometric Titrations<br>(Advanced Level)</a></li>
+              </ul>
+            </li>
+          </ul>
+          <!-- <form class="navbar-form navbar-left" role="search">
+            <div class="form-group">
+              <input type="text" class="form-control" id="navbar-search-input" placeholder="Search">
+            </div>
+          </form> -->
+        </div>
+        <!-- /.navbar-collapse -->
+        <!-- Navbar Right Menu -->
+        <div class="navbar-custom-menu">
+          <ul class="nav navbar-nav">
+            <!-- Messages: style can be found in dropdown.less-->
+            <li class="dropdown messages-menu">
+              <!-- Menu toggle button -->
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <i class="fa fa-envelope-o"></i>
+                <span class="label label-success">4</span>
+              </a>
+              <ul class="dropdown-menu">
+                <li class="header">You have 4 messages</li>
+                <li>
+                  <!-- inner menu: contains the messages -->
+                  <ul class="menu">
+                    <li><!-- start message -->
+                      <a href="#">
+                        <div class="pull-left">
+                          <!-- User Image -->
+                          <img src="../../dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                        </div>
+                        <!-- Message title and timestamp -->
+                        <h4>
+                          Support Team
+                          <small><i class="fa fa-clock-o"></i> 5 mins</small>
+                        </h4>
+                        <!-- The message -->
+                        <p>Why not buy a new awesome theme?</p>
+                      </a>
+                    </li>
+                    <!-- end message -->
+                  </ul>
+                  <!-- /.menu -->
+                </li>
+                <li class="footer"><a href="#">See All Messages</a></li>
+              </ul>
+            </li>
+            <!-- /.messages-menu -->
+
+            <!-- Notifications Menu -->
+            <li class="dropdown notifications-menu">
+              <!-- Menu toggle button -->
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <i class="fa fa-bell-o"></i>
+                <span class="label label-warning">10</span>
+              </a>
+              <ul class="dropdown-menu">
+                <li class="header">You have 10 notifications</li>
+                <li>
+                  <!-- Inner Menu: contains the notifications -->
+                  <ul class="menu">
+                    <li><!-- start notification -->
+                      <a href="#">
+                        <i class="fa fa-users text-aqua"></i> 5 new members joined today
+                      </a>
+                    </li>
+                    <!-- end notification -->
+                  </ul>
+                </li>
+                <li class="footer"><a href="#">View all</a></li>
+              </ul>
+            </li>
+            <!-- Tasks Menu -->
+            <li class="dropdown tasks-menu">
+              <!-- Menu Toggle Button -->
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <i class="fa fa-flag-o"></i>
+                <span class="label label-danger">9</span>
+              </a>
+              <ul class="dropdown-menu">
+                <li class="header">You have 9 tasks</li>
+                <li>
+                  <!-- Inner menu: contains the tasks -->
+                  <ul class="menu">
+                    <li><!-- Task item -->
+                      <a href="#">
+                        <!-- Task title and progress text -->
+                        <h3>
+                          Design some buttons
+                          <small class="pull-right">20%</small>
+                        </h3>
+                        <!-- The progress bar -->
+                        <div class="progress xs">
+                          <!-- Change the css width attribute to simulate progress -->
+                          <div class="progress-bar progress-bar-aqua" style="width: 20%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                            <span class="sr-only">20% Complete</span>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <!-- end task item -->
+                  </ul>
+                </li>
+                <li class="footer">
+                  <a href="#">View all tasks</a>
+                </li>
+              </ul>
+            </li>
+            <!-- User Account Menu -->
+            <li class="dropdown user user-menu">
+              <!-- Menu Toggle Button -->
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <!-- The user image in the navbar-->
+                <img src="../../dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+                <!-- hidden-xs hides the username on small devices so only the image appears. -->
+                <span class="hidden-xs">Alex Njuguna</span>
+              </a>
+              <ul class="dropdown-menu">
+                <!-- The user image in the menu -->
+                <li class="user-header">
+                  <img src="../../dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+
+                  <p>
+                    Alex Njuguna - Student
+                    <small>Member since Nov. 2018</small>
+                  </p>
+                </li>
+                <!-- Menu Body -->
+                <li class="user-body">
+                  <div class="row">
+                    <div class="col-xs-4 text-center">
+                      <a href="#">Followers</a>
+                    </div>
+                    <div class="col-xs-4 text-center">
+                      <a href="#">Sales</a>
+                    </div>
+                    <div class="col-xs-4 text-center">
+                      <a href="#">Friends</a>
+                    </div>
+                  </div>
+                  <!-- /.row -->
+                </li>
+                <!-- Menu Footer-->
+                <li class="user-footer">
+                  <div class="pull-left">
+                    <a href="#" class="btn btn-default btn-flat">Profile</a>
+                  </div>
+                  <div class="pull-right">
+                    <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                  </div>
+                </li>
+                <li>
+                  <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <!-- /.navbar-custom-menu -->
+      </div>
+      <!-- /.container-fluid -->
+    </nav>
+  </header>
+
+
+
+  <!-- <aside class="main-sidebar" style="background: linear-gradient(-95deg,#003c93 1%,#08101c 100%);"> -->
+    <!-- sidebar: style can be found in sidebar.less -->
+    <!-- <section class="sidebar" > -->
+      
+      <!-- <form action="#" method="get" class="sidebar-form">
+        <div class="input-group">
+          <input type="text" name="q" class="form-control" placeholder="Search...">
+          <span class="input-group-btn">
+            <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
+            </button>
+          </span>
+        </div>
+      </form> -->
+      <!-- /.search form -->
+      <!-- sidebar menu: : style can be found in sidebar.less -->
+      <!-- <ul class="sidebar-menu" data-widget="tree"> -->
+          <!-- <li class="header">WORK SPACE</li>
+            <li class="active treeview"> -->
+              <!-- <a href="#"> -->
+             <!-- </i> <span>LAB SPACE</span>
+              <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span> -->
+            <!-- </a> -->
+            <!-- <ul class="treeview-menu">
+              <li class="active"><a href="index.html"><i class="fa fa-circle-o"></i>LAB SPACE</a></li>
+              
+            </ul> -->
+
+            <!-- <style>
+              .treeview a:hover{background-color:#022353 !important;}
+              a.blue:hover{background-color:#022353 !important;}
+              </style>
+
+          </li> -->
+          <!-- <li class="treeview">
+            <a href="#">
+              <i class="fa fa-hand-pointer-o" style="color: #cedffa;"></i>
+              <span style="color:#9ac1ff !important;">Choose Practical</span>
+              <span class="pull-right-container">
+              </span>
+            </a>
+            <ul class="treeview-menu" style="background-color:transparent;">
+              <li><a href="./titrations.html" style="color:#cedffa;"><i class="fa fa-circle-o"></i> Titration</a></li>
+              <li><a href="./acid-base.html" style="color:#cedffa;"><i class="fa fa-circle-o"></i> Acid-Base Indicators</a></li>
+              <li><a href="./equilibrium.html" style="color:#cedffa;"><i class="fa fa-circle-o"></i> Equilibrium</a></li>
+              <li><a href="./electrolysis.html" style="color:#cedffa;"><i class="fa fa-circle-o"></i> Electrolysis</a></li>
+            </ul>
+          </li> -->
+          
+          <!-- <li>
+              <a href="../tasks.html" class="blue">
+                <i class="fa fa-th" style="color: #cedffa;"></i>
+                <span style="color:#9ac1ff !important;">Tasks</span>
+                <span class="pull-right-container">
+                  <small class="label pull-right bg-green">new</small>
+                </span>
+              </a>
+            </li> -->
+          
+          <!-- <li class="treeview">
+            <a href="#">
+              <i class="fa fa-flask" style="color: #cedffa;"></i>
+              <span style="color:#9ac1ff !important;">Titrant</span>
+              <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+            </a>
+            <ul class="treeview-menu" style="background-color:transparent;">
+              <li><a href="#" style="color:#cedffa;"><i class="fa fa-circle-o"></i> Volumetric Flasks</a></li>
+              <li><a href="#" style="color:#cedffa;"><i class="fa fa-circle-o"></i> Conical Flasks</a></li>
+              <li><a href="#" style="color:#cedffa;"><i class="fa fa-circle-o"></i> Round-bottomed Flask</a></li>
+            </ul>
+          </li> -->
+
+
+         
+
+          <!-- TestTubes -->
+
+          <!-- <li class="treeview">
+            <a href="#">
+              <i class="fa fa-pencil" style="color: #cedffa;"></i>
+              <span style="color:#9ac1ff !important;">Test Tubes</span>
+              <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+            </a>
+            <ul class="treeview-menu" style="background-color:transparent;">
+              <li><a href="#" style="color:#cedffa;"><i class="fa fa-circle-o"></i> Small</a></li>
+              <li><a href="#" style="color:#cedffa;"><i class="fa fa-circle-o"></i> Medium</a></li>
+              <li><a href="#" style="color:#cedffa;"><i class="fa fa-circle-o"></i> Large</a></li>
+            </ul>
+          </li> -->
+
+
+
+<!-- 
+          <md-content flex layout="row" style="background-color: #dee8f7;">
+              <md-content  id="content" layout="column"  style="background-color: #dee8f7;" md-swipe-right="toggleSidenav()">    
+                  <canvas id="demoCanvas" width="700" height="700" align="center" style="background-color:#dee8f7" layout-fill experiment></canvas>
+                  
+                  </md-content>
+          
+          <md-sidenav class="site-sidenav md-sidenav-left" md-component-id="right" md-is-locked-open="$mdMedia('gt-md')" md-swipe-left="toggleSidenav()">
+              <div>  
+              <md-button id="variables" class="md-raised md-primary toolbarbutton subTitle" ng-click="toggle1()">{{variables}} 
+                  <span aria-hidden="true">
+                  <md-icon md-svg-src="md-toggle-arrow"  aria-hidden="true" ng-animate="{enter: 'rotate', leave: 'rotateCounterwise'}" ng-class="{true: 'rotate', false: 'rotateCounterwise'}[isActive1]" ></md-icon>
+                  </span> 
+              </md-button>
+              
+              <div ng-hide="showVariables" class="div">
+                
+            
+                  <md-content class="md-padding selectable">
+              <md-select placeholder="{{initial_titrant}}"  ng-disabled="dropdown_disable" ng-model="titrant_soln" ng-change="selectTitrant();"ng-init="titration_soln='0'" aria-label="rating">
+                          <md-option ng-repeat="x in titrant_Array" value="{{ x.type }}">
+                              {{ x.solution }}
+                          </md-option>
+                      </md-select>
+                  </md-content>
+            
+            
+                  <md-content class="md-title selectable" layout-padding>{{drop_speed}} : {{speed}}</md-content>
+                 
+                  <div layout>      
+                      <md-slider flex md-discrete ng-disabled="drop_slider_disable" ng-model="speed"  step="0.1" min="0.1" max="1" aria-label="rating" ng-change="changeDropSpeed();"></md-slider>        
+                  </div>
+            
+            
+                  <md-content id="selectCathode" class="md-title selectable" layout-padding>{{titrate_label}} :</md-content>
+                  
+            <md-content class="md-padding selectable">
+              <md-select ng-disabled="dropdown_disable" placeholder="{{initial_titrate}}"  ng-model="titrate_soln" ng-change="selectTitrate();" ng-init="test_type='0'" aria-label="rating">
+                          <md-option ng-repeat="x in titrate_Array" value="{{ x.type }}">
+                              {{ x.selected_type }}
+                          </md-option>
+                      </md-select>
+                  </md-content>
+            
+          
+                  <md-content class="md-title selectable" layout-padding>{{normality_label}} : {{normality}} {{normality_unit}}</md-content>
+                 
+                  <div layout>      
+                      <md-slider flex md-discrete ng-disabled="slider_disable" ng-model="normality"  step="0.1" min="0.1" max="2" aria-label="rating"></md-slider>        
+                  </div>
+            
+            
+                  <md-content class="md-title selectable" layout-padding>{{volume_label}} : {{volume}} {{solution_unit}}</md-content>
+                 
+                  <div layout>      
+                      <md-slider flex md-discrete ng-disabled="slider_disable" ng-model="volume"  step="1" min="10" max="20" aria-label="rating" ng-change="changeVolume();"></md-slider>        
+                  </div>
+            
+            
+                  <md-content id="selectCathode" class="md-title selectable" layout-padding>{{indicator_label}} :</md-content>
+            
+            <md-content class="md-padding selectable">
+              <md-select ng-disabled="dropdown_disable" placeholder="{{initial_indicator}}"  ng-model="indicator_type" ng-change="selectIndicator();" ng-init="test_type='0'" aria-label="rating">
+                          <md-option ng-repeat="x in indicator_Array" value="{{ x.type }}">
+                              {{ x.selected_type }}
+                          </md-option>
+                      </md-select>
+                  </md-content>
+            
+            
+            <md-content class="md-title selectable" layout-padding ng-show="error_display">
+              <md-content id="errorIcon" class="md-title selectable" layout-padding><img src="inorganic-chemistry-virtual-lab-master/src/lab/template/images/wrong_icon.svg" /></md-content>
+              <md-content id="solutionTxt" class="md-title selectable" layout-padding>{{error_message}}</md-content>
+            </md-content>
+            
+            
+            <section layout="row" layout-align="center center">
+              <md-button  class="md-raised" id="startExp"  ng-disabled="start_disable" ng-click="startExp();">{{start_exp}}</md-button>
+            </section>
+            
+            
+            <section layout="row" layout-align="center center">
+              <md-button  class="md-raised" id="reset" ng-click="resetExp();">{{reset_exp}}</md-button>
+            </section>
+            
+            
+            <md-button id="result" class="md-raised md-primary toolbarbutton subTitle" ng-click="toggle()">{{result}} 
+              <span aria-hidden="true">
+                <md-icon md-svg-src="md-toggle-arrow"   aria-hidden="true" ng-animate="{enter: 'rotate', leave: 'rotateCounterwise'}" ng-class="{true: 'rotate', false: 'rotateCounterwise'}[isActive]" ></md-icon>
+              </span>
+            </md-button>
+                  
+            <div ng-hide="showValue" class="div"> 
+              <md-content  class="md-title selectable" ng-model="objecta_label" layout-padding id="object_label_rslt">{{titrant_label1}} : {{titrant_used}} {{solution_unit}}</md-content>
+            </div>
+              </div>
+          </div>
+          </md-sidenav>
+          </md-content> -->
+
+
+
+
+
+
+          <!-- pipettes -->
+<!-- 
+          <li class="treeview">
+            <a href="#">
+              <i class="fa fa-eyedropper" style="color: #cedffa;"></i>
+              <span style="color:#9ac1ff !important;">Pipettes</span>
+              <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+            </a>
+            <ul class="treeview-menu" style="background-color:transparent;">
+              <li><a href="#" style="color:#cedffa;"><i class="fa fa-circle-o"></i> 1.5 mL</a></li>
+              <li><a href="#" style="color:#cedffa;"><i class="fa fa-circle-o"></i> 3.9 mL</a></li>
+              <li><a href="#" style="color:#cedffa;"><i class="fa fa-circle-o"></i> 15.0 mL</a></li>
+            </ul>
+          </li>
+          
+          <li class="treeview">
+            <a href="#">
+              <i class="fa fa-table" style="color: #cedffa;"></i>
+              <span style="color:#9ac1ff !important;">Tables</span>
+              <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+            </a>
+            <ul class="treeview-menu" style="background-color:transparent;">
+              <li><a href="/Student/pages/tables/PeriodicTable/pt.html" style="color:#cedffa;"><i class="fa fa-circle-o"></i> Periodic Table</a></li>
+            </ul>
+          </li> -->
+          
+        <!-- </section> -->
+        <!-- /.sidebar -->
+      <!-- </aside> -->
+
+
+
+      <!-- Full Width Column -->
+      <div class="content-wrapper" style="background-color:#8eb3f0 !important">
+        <div class="container">
+          <!-- Content Header (Page header) -->
+          <section class="content-header">
+          
+            
+          </section>
+
+          <!-- Main content -->
+
+          <section class="content">
+            <iframe src="inorganic-chemistry-virtual-lab-master/src/lab/Acid_Base_Titration/experiment.html" style="height:800px;width: 1135px; margin-left: 1px;
+                  margin-top: 0; margin-left: 85px; background: transparent; margin-bottom: 0px" allowTransparency="true" scrolling="no" 
+              frameborder="0">
+              </iframe>
+
+
+          </section>
+          <!-- /.content -->
+        </div>
+        <!-- /.container -->
+      </div>
+      <!-- /.content-wrapper -->
+      
+    </div>
+    <!-- ./wrapper -->
+
+    <!-- jQuery 3 -->
+    <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap 3.3.7 -->
+    <script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- SlimScroll -->
+    <script src="../../bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+    <!-- FastClick -->
+    <script src="../../bower_components/fastclick/lib/fastclick.js"></script>
+    <!-- AdminLTE App -->
+    <script src="../../dist/js/adminlte.min.js"></script>
+    <!-- AdminLTE for demo purposes -->
+    <script src="../../dist/js/demo.js"></script>
+  </body>
+  </html>

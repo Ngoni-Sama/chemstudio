@@ -1,0 +1,304 @@
+<!doctype html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Element Comparison</title>
+  
+  <link rel="stylesheet" href="elementRadius.css">
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+
+  <script src="https://use.typekit.net/ndg5ngh.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+</head>
+
+<body>
+  
+  <header id="head">
+    <div class="container">
+      <button id="reset_all" class="reset btn hidden" title="Reset all selections to the default state">Reset</button>
+    </div>
+  </header>
+
+  <div class="header">
+    <div class="container">
+      <h2>Choose elements from the table to compare.</h2>
+    </div>
+  </div>
+
+  <div id="periodic-table">
+    <div class="container">
+
+      <div class="col colOne">
+          <div class="el on"><span>H</span></div> 
+          <div class="el on"><span>Li</span></div> 
+          <div class="el on"><span>Na</span></div> 
+          <div class="el on"><span>K</span></div> 
+          <div class="el on"><span>Rb</span></div> 
+          <div class="el on"><span>Cs</span></div> 
+          <div class="el"><span>Fr</span></div> 
+      </div>
+      <div class="col colTwo">
+          <div class="el on"><span>Be</span></div> 
+          <div class="el on"><span>Mg</span></div> 
+          <div class="el on"><span>Ca</span></div> 
+          <div class="el on"><span>Sr</span></div> 
+          <div class="el on"><span>Ba</span></div> 
+          <div class="el"><span>Ra</span></div> 
+      </div>
+      <div class="col colOverflow">
+        <div class="el"><span>...</span></div> 
+        <div class="el"><span>...</span></div> 
+        <div class="el"><span>...</span></div> 
+        <div class="el"><span>...</span></div> 
+      </div>
+      <div class="col colThree">
+          <div class="el"><span>Sc</span></div> 
+          <div class="el"><span>Y</span></div> 
+          <div class="el"><span>...</span></div> 
+          <div class="el"><span>...</span></div> 
+      </div>
+      <div class="col colThree">
+          <div class="el"><span>Ti</span></div> 
+          <div class="el"><span>Zr</span></div> 
+          <div class="el"><span>Hf</span></div> 
+          <div class="el"><span>Rf</span></div> 
+      </div>
+      <div class="col colThree">
+          <div class="el"><span>V</span></div> 
+          <div class="el"><span>Nb</span></div> 
+          <div class="el"><span>Ta</span></div> 
+          <div class="el"><span>Db</span></div> 
+      </div>
+      <div class="col colThree">
+          <div class="el"><span>Cr</span></div> 
+          <div class="el"><span>Mo</span></div> 
+          <div class="el"><span>W</span></div> 
+          <div class="el"><span>Sg</span></div> 
+      </div>
+      <div class="col colThree">
+          <div class="el"><span>Mn</span></div> 
+          <div class="el"><span>Tc</span></div> 
+          <div class="el"><span>Re</span></div> 
+          <div class="el"><span>Bh</span></div> 
+      </div>
+      <div class="col colThree">
+          <div class="el"><span>Fe</span></div> 
+          <div class="el"><span>Ru</span></div> 
+          <div class="el"><span>Os</span></div> 
+          <div class="el"><span>Hs</span></div> 
+      </div>
+      <div class="col colThree">
+          <div class="el"><span>Co</span></div> 
+          <div class="el"><span>Rh</span></div> 
+          <div class="el"><span>Ir</span></div> 
+          <div class="el"><span>Mt</span></div> 
+      </div>
+      <div class="col colThree">
+          <div class="el"><span>Ni</span></div> 
+          <div class="el"><span>Pd</span></div> 
+          <div class="el"><span>Pt</span></div> 
+          <div class="el"><span>Ds</span></div> 
+      </div>
+      <div class="col colThree">
+          <div class="el"><span>Cu</span></div> 
+          <div class="el"><span>Ag</span></div> 
+          <div class="el"><span>Au</span></div> 
+          <div class="el"><span>Rg</span></div> 
+      </div>
+      <div class="col colThree">
+          <div class="el"><span>Zn</span></div> 
+          <div class="el"><span>Cd</span></div> 
+          <div class="el"><span>Hg</span></div> 
+          <div class="el"><span>Uub</span></div> 
+      </div>
+      <div class="col colFour">
+          <div class="el on"><span>B</span></div> 
+          <div class="el on"><span>Al</span></div> 
+          <div class="el"><span>Ga</span></div> 
+          <div class="el"><span>In</span></div> 
+          <div class="el"><span>Ti</span></div> 
+          <div class="el"><span>Uut</span></div> 
+      </div>
+      <div class="col colFour">
+          <div class="el on"><span>C</span></div> 
+          <div class="el on"><span>Si</span></div> 
+          <div class="el"><span>Ge</span></div> 
+          <div class="el"><span>Sn</span></div>
+          <div class="el"><span>Pb</span></div> 
+          <div class="el"><span>Fl</span></div>  
+      </div>
+      <div class="col colFour">
+          <div class="el"><span>N</span></div> 
+          <div class="el on"><span>P</span></div> 
+          <div class="el"><span>As</span></div> 
+          <div class="el"><span>Sb</span></div> 
+          <div class="el"><span>Bi</span></div> 
+          <div class="el"><span>Uup</span></div> 
+      </div>
+      <div class="col colFour">
+          <div class="el on"><span>O</span></div> 
+          <div class="el on"><span>S</span></div> 
+          <div class="el"><span>Se</span></div> 
+          <div class="el"><span>Te</span></div> 
+          <div class="el"><span>Po</span></div> 
+          <div class="el"><span>Lv</span></div> 
+      </div>
+      <div class="col colFour">
+          <div class="el on"><span>F</span></div> 
+          <div class="el on"><span>Cl</span></div> 
+          <div class="el on"><span>Br</span></div> 
+          <div class="el on"><span>I</span></div> 
+          <div class="el"><span>At</span></div> 
+          <div class="el"><span>Uus</span></div> 
+      </div>
+      <div class="col colFive">
+          <div class="el on"><span>He</span></div> 
+          <div class="el on"><span>Ne</span></div> 
+          <div class="el on"><span>Ar</span></div> 
+          <div class="el on"><span>Kr</span></div> 
+          <div class="el on"><span>Xe</span></div> 
+          <div class="el on"><span>Rn</span></div> 
+          <div class="el"><span>Uuo</span></div> 
+      </div>
+
+    </div>
+  </div>
+
+  <div id="chart-modal" class="mfp-hide">
+    <span class="chart-filter-socn">
+      <select id="chart-filter" style="width:15rem;"></select>
+    </span>
+    <h1 id="cm-title">Atomic Radius</h1>
+    <div id="chart-radius" style="width:100%;height:22rem;"></div>
+  </div>
+  <br><br><br><br>
+
+  <div class="header">
+    <div class="container">
+      <h2>Drag free electrons of <span style="color:#d40101">halogens</span> onto the outermost shell to add them.</h2>
+    </div>
+  </div>
+
+  <div class="atom-cols container">
+
+    <div class="row">
+
+      <div class="column">
+        <div class="atomheading">
+          <p>
+            <span class="name"><span class="placeholder">Element</span></span>
+            <span class="symbol"><span class="ionized"></span></span>
+          </p>
+          <span class="smalltitle proton-count placeholder">Protons <span class="count">1</span></span>
+          <span class="smalltitle electron-count placeholder">Electrons <span class="count">1</span></span>
+        </div>
+        <div class="atombox">
+          <div class="atom" id="atom-1">
+
+            <span class="atomic-number placeholder">Choose an element from the table to compare</span>
+
+            <div class="shell placeholder"></div>
+
+          </div>
+          <div class="free-electron-container placeholder" data-hidden="0" id="fec-1">
+            <div class="free-electrons f">
+              <span class="free-electron"></span>
+              <span class="free-electron"></span>
+              <span class="free-electron"></span>
+            </div>
+            <span class="dragme-electron" data-drops="0" id="electron-1"><span class="e"></span></span>
+          </div>          
+        </div>
+        <div class="atomfooter">
+          <span class="smalltitle affinity-energy placeholder"><span title="Electron Affinity is the release of a specific amount of energy (exothermic) when an electron is added to a neutral atom in order for it to form a negative ion." class="tooltipped">First Electron Affinity 
+
+            <svg version="1.1"
+                 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+                 x="0px" y="0px" width="10px" height="10px" viewBox="0 0 7 7" enable-background="new 0 0 7 7" xml:space="preserve">
+            <defs></defs>
+            <g>
+                <circle fill="#CCCCCC" cx="3.5" cy="3.5" r="3.5"/>
+                <g>
+                    <path fill="#FFFFFF" d="M4.4,5.1L4.3,5.4C4.1,5.4,4,5.5,3.9,5.5c-0.1,0-0.2,0.1-0.4,0.1C3.3,5.6,3.2,5.5,3,5.4S2.9,5.2,2.9,5
+                        c0-0.1,0-0.1,0-0.2c0-0.1,0-0.1,0-0.2l0.2-0.8c0-0.1,0-0.1,0-0.2c0-0.1,0-0.1,0-0.2c0-0.1,0-0.2-0.1-0.2c0,0-0.1-0.1-0.2-0.1
+                        c-0.1,0-0.1,0-0.2,0c-0.1,0-0.1,0-0.2,0.1L2.6,3C2.8,3,2.9,2.9,3,2.9c0.1,0,0.3-0.1,0.4-0.1c0.2,0,0.4,0.1,0.5,0.2
+                        s0.2,0.2,0.2,0.4c0,0,0,0.1,0,0.2c0,0.1,0,0.2,0,0.2L3.8,4.6c0,0.1,0,0.1,0,0.2c0,0.1,0,0.1,0,0.2c0,0.1,0,0.2,0.1,0.2
+                        c0,0,0.1,0.1,0.2,0.1c0.1,0,0.1,0,0.2,0C4.3,5.2,4.3,5.1,4.4,5.1z M4.4,1.9c0,0.1-0.1,0.2-0.2,0.3C4.2,2.3,4,2.4,3.9,2.4
+                        c-0.1,0-0.3,0-0.4-0.1C3.4,2.2,3.4,2,3.4,1.9c0-0.1,0.1-0.2,0.2-0.3c0.1-0.1,0.2-0.1,0.4-0.1c0.1,0,0.3,0,0.4,0.1
+                        C4.4,1.7,4.4,1.8,4.4,1.9z"/>
+                </g>
+            </g>
+            </svg>
+
+          </span><span class="count">100 kj/mol</span></span>
+          <span class="smalltitle atomic-radius placeholder">Atomic Radius <span class="count">40 pm</span></span>
+          <span class="smalltitle ionic-radius placeholder">Ionic Radius <span class="count">35 pm</span></span>
+        </div>        
+      </div> 
+
+      <div class="column">
+        <div class="atomheading">
+          <p>
+            <span class="name"><span class="placeholder">Element</span></span>
+            <span class="symbol"><span class="ionized"></span></span>
+          </p>
+          <span class="smalltitle proton-count placeholder">Protons <span class="count">1</span></span>
+          <span class="smalltitle electron-count placeholder">Electrons <span class="count">1</span></span>
+        </div>
+        <div class="atombox">
+          <div class="atom" id="atom-2">
+
+            <span class="atomic-number placeholder">Choose an element from the table to compare</span>
+
+            <div class="shell placeholder"></div>
+
+          </div>
+          <div class="free-electron-container placeholder" data-hidden="0" id="fec-2">
+            <div class="free-electrons f">
+              <span class="free-electron"></span>
+              <span class="free-electron"></span>
+              <span class="free-electron"></span>
+            </div>
+            <span class="dragme-electron" data-drops="0" id="electron-2"><span class="e"></span></span>
+          </div>
+        </div>
+        <div class="atomfooter">
+          <span class="smalltitle affinity-energy placeholder"><span title="Electron Affinity is the release of a specific amount of energy (exothermic) when an electron is added to a neutral atom in order for it to form a negative ion." class="tooltipped">First Electron Affinity
+
+            <svg version="1.1"
+                 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+                 x="0px" y="0px" width="10px" height="10px" viewBox="0 0 7 7" enable-background="new 0 0 7 7" xml:space="preserve">
+            <defs></defs>
+            <g>
+                <circle fill="#CCCCCC" cx="3.5" cy="3.5" r="3.5"/>
+                <g>
+                    <path fill="#FFFFFF" d="M4.4,5.1L4.3,5.4C4.1,5.4,4,5.5,3.9,5.5c-0.1,0-0.2,0.1-0.4,0.1C3.3,5.6,3.2,5.5,3,5.4S2.9,5.2,2.9,5
+                        c0-0.1,0-0.1,0-0.2c0-0.1,0-0.1,0-0.2l0.2-0.8c0-0.1,0-0.1,0-0.2c0-0.1,0-0.1,0-0.2c0-0.1,0-0.2-0.1-0.2c0,0-0.1-0.1-0.2-0.1
+                        c-0.1,0-0.1,0-0.2,0c-0.1,0-0.1,0-0.2,0.1L2.6,3C2.8,3,2.9,2.9,3,2.9c0.1,0,0.3-0.1,0.4-0.1c0.2,0,0.4,0.1,0.5,0.2
+                        s0.2,0.2,0.2,0.4c0,0,0,0.1,0,0.2c0,0.1,0,0.2,0,0.2L3.8,4.6c0,0.1,0,0.1,0,0.2c0,0.1,0,0.1,0,0.2c0,0.1,0,0.2,0.1,0.2
+                        c0,0,0.1,0.1,0.2,0.1c0.1,0,0.1,0,0.2,0C4.3,5.2,4.3,5.1,4.4,5.1z M4.4,1.9c0,0.1-0.1,0.2-0.2,0.3C4.2,2.3,4,2.4,3.9,2.4
+                        c-0.1,0-0.3,0-0.4-0.1C3.4,2.2,3.4,2,3.4,1.9c0-0.1,0.1-0.2,0.2-0.3c0.1-0.1,0.2-0.1,0.4-0.1c0.1,0,0.3,0,0.4,0.1
+                        C4.4,1.7,4.4,1.8,4.4,1.9z"/>
+                </g>
+            </g>
+            </svg>
+
+          </span> <span class="count">100 kj/mol</span></span>
+          <span class="smalltitle atomic-radius placeholder">Atomic Radius <span class="count">40 pm</span></span>
+          <span class="smalltitle ionic-radius placeholder">Ionic Radius <span class="count">35 pm</span></span>
+        </div>        
+      </div> 
+
+    </div>
+  </div>
+
+  <!-- <div class="container">
+    <button class="show-chart" id="show_chart" data-mfp-src="#chart-modal">Go to graphs</button>
+  </div> -->
+
+  <script src="elementRadius.js"></script>
+
+
+</body>
+</html>

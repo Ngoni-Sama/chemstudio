@@ -1,0 +1,153 @@
+*{
+	margin:0;
+	padding:0;
+}
+
+#particles-js{
+	background-color: #08101c;
+  position:fixed;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  z-index:0; 
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #DDD;
+  font-size: 16px;
+  color: #08101c;
+  font-family:'Comfortaa', 'Roboto', sans-serif !important ;
+  font-weight: 300;
+}
+
+.mainContainer {
+  position: relative;
+  margin: 5% auto;
+  width: 600px;
+  height: 350px;
+  background: transparent; /*#8cb5f2*/
+  border-radius: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
+
+.containerTeacher, .containerStudent{
+  display: none;
+  position: absolute;
+  margin-left: 466px;
+  margin-top: 42px !important;
+  width: 600px;
+  height: 350px;
+} 
+
+.left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  padding: 40px;
+  width: 300px;
+  height: 400px;
+}
+
+#who {
+  margin-left: 7.3em;
+  padding-top: 1.2em;
+  color: #d1e1f9;
+  margin-left: 196px;
+  font-weight: bold;
+}
+
+h1 {
+  margin: 0 0 20px 0;
+  font-weight: 300;
+  font-size: 30px !important;
+}
+
+.or {
+  position: absolute;
+  top: 180px;
+  left: 280px;
+  width: 40px;
+  height: 40px;
+  background: #dee8f7;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  line-height: 40px;
+  text-align: center;
+}
+
+.right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  box-sizing: border-box;
+  padding: 40px;
+  width: 300px;
+  height: 400px;
+  background: url('https://goo.gl/YbktSj');
+  background-size: cover;
+  background-position: center;
+  border-radius: 0 2px 2px 0;
+}
+
+.right {
+  display: block;
+  margin-bottom: 40px;
+  font-size: 28px;
+  color: #FFF;
+  text-align: center;
+}
+
+.thumbnailcirc {
+  background: #dee8f7;/*#EF3B3A*/
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 30px;
+  padding: 28px 20px;
+  /*padding: 60px 30px;*/
+  border-top-left-radius: 100%;
+  border-top-right-radius: 100%;
+  border-bottom-left-radius: 100%;
+  border-bottom-right-radius: 100%;
+  box-sizing: border-box;
+}
+
+.teacher{
+  position: relative;
+  z-index: 1;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.teacher{
+  margin: 50px auto;
+  text-align: center;
+}
+.teacher{
+  margin: 0 0 15px;
+  padding-top: 4.8em;
+  font-size: 36px;
+  font-weight: 300;
+  color: #d1e1f9;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.t{  /*teacher image*/
+  width: 108px;
+  height: 108px;
+}
+
+.s{  /*student image*/
+  width: 90px;
+  height: 90px;
+
+}
+
+
+

@@ -1,0 +1,239 @@
+
+#sign {
+  color: #eee;
+}
+#sign .modal-content {
+  box-shadow: none;
+  background-color: transparent;
+  border: none;
+  margin-top: 330px;
+}
+#sign a:link, #sign a:visited {
+  color: #8cb5f2;
+}
+#sign .nav-tabs {
+  border-bottom-color: rgba(255, 255, 255, 0.2);
+}
+#sign .nav-tabs li {
+  width: 50%;
+  text-align: center;
+  font-weight: 900;
+  font-size: 2rem;
+  font-family: Lato, sans-serif;
+}
+#sign .nav-tabs li a:hover {
+  background-color: rgba(0, 0, 0, 0.15);
+  border-color: transparent;
+}
+#sign .nav-tabs li.active a, #sign .nav-tabs li.active a:hover {
+  background-color: #313945;  /* BG for signuo/login*/
+  border-color: rgba(255, 255, 255, 0.2);
+  border-bottom-color: #313945;
+}
+#sign .tab-content {
+  position: relative;
+  perspective: 100%;
+  perspective-origin: 50% 50%;
+}
+#sign .tab-content:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+#sign .tab-content .tab-pane {
+  padding: 30px 0;
+  display: block !important;
+  position: absolute;
+  width: 100%;
+  transform-style: preserve-3d;
+  transform: scale(0.8) rotateY(0);
+  transition: all 0.5s cubic-bezier(0.5, 0.2, 0, 1);
+  opacity: 0;
+}
+#sign .tab-content .tab-pane:nth-child(1) {
+  transform: rotateY(-90deg) translateZ(200px);
+}
+#sign .tab-content .tab-pane:nth-child(1).active {
+  transform: rotateY(0deg) translateZ(200px);
+  opacity: 1;
+}
+#sign .tab-content .tab-pane:nth-child(2) {
+  transform: rotateY(90deg) translateZ(200px);
+}
+#sign .tab-content .tab-pane:nth-child(2).active {
+  transform: rotateY(0) translateZ(200px);
+  opacity: 1;
+}
+#sign .tab-content .tab-pane .btn {
+  font-family: Lato, sans-serif;
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+#sign .tab-content .tab-pane .btn .fa {
+  margin-right: 15px;
+}
+#sign .tab-content .tab-pane .btn.btn-facebook {
+  background-color: #dee8f7;
+  color: #08101c;
+}
+#sign .tab-content .tab-pane .btn.btn-linkedin {
+  background-color: #4875B4;
+  color: white;
+}
+#sign .tab-content .tab-pane .btn.btn-linkedin:hover {
+  background-color: #5f86bc;
+}
+#sign .tab-content .tab-pane .btn.btn-default {
+  background-color: #313945;
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+#sign .tab-content .tab-pane .btn.btn-default:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+#sign .tab-content .tab-pane form#signupform {
+  display: block;
+}
+#sign .tab-content .tab-pane form#loginform {
+  display: block;
+}
+#sign .tab-content .tab-pane form input.form-control {
+  background-color: transparent;
+  border-radius: 0;
+  border-color: transparent transparent rgba(255, 255, 255, 0.2) transparent;
+  box-shadow: none;
+  text-align: center;
+  color: #dee8f7;
+  font-size: 20px;
+}
+#sign .tab-content .tab-pane form input.form-control:nth-last-child(1) {
+  margin-bottom: 20px;
+}
+#sign .tab-content .tab-pane p {
+  margin-bottom: 20px;
+}
+#sign .tab-content .tab-pane p .fa {
+  margin-right: 5px;
+  color: #888;
+}
+
+
+
+#sign2 {
+  color: #eee;
+}
+#sign2 .modal-content2 {
+  box-shadow: none;
+  background-color: transparent;
+  border: none;
+  margin-top: 330px;
+}
+#sign2 a:link, #sign2 a:visited {
+  color: #8cb5f2;
+}
+#sign2 .nav-tabs {
+  border-bottom-color: rgba(255, 255, 255, 0.2);
+}
+#sign2 .nav-tabs li {
+  width: 50%;
+  text-align: center;
+  font-weight: 900;
+  font-size: 2rem;
+  font-family: Lato, sans-serif;
+}
+#sign2 .nav-tabs li a:hover {
+  background-color: rgba(0, 0, 0, 0.15);
+  border-color: transparent;
+}
+#sign2 .nav-tabs li.active a, #sign2 .nav-tabs li.active a:hover {
+  background-color: #313945;  /* BG for signuo/login*/
+  border-color: rgba(255, 255, 255, 0.2);
+  border-bottom-color: #313945;
+}
+#sign2 .tab-content2 {
+  position: relative;
+  perspective: 100%;
+  perspective-origin: 50% 50%;
+}
+#sign2 .tab-content2:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+#sign2 .tab-content2 .tab-pane2 {
+  padding: 30px 0;
+  display: block !important;
+  position: absolute;
+  width: 100%;
+  transform-style: preserve-3d;
+  transform: scale(0.8) rotateY(0);
+  transition: all 0.5s cubic-bezier(0.5, 0.2, 0, 1);
+  opacity: 0;
+}
+#sign2 .tab-content2 .tab-pane2:nth-child(1) {
+  transform: rotateY(-90deg) translateZ(200px);
+}
+#sign2 .tab-content2 .tab-pane2:nth-child(1).active {
+  transform: rotateY(0deg) translateZ(200px);
+  opacity: 1;
+}
+#sign2 .tab-content2 .tab-pane2:nth-child(2) {
+  transform: rotateY(90deg) translateZ(200px);
+}
+#sign2 .tab-content2 .tab-pane2:nth-child(2).active {
+  transform: rotateY(0) translateZ(200px);
+  opacity: 1;
+}
+#sign2 .tab-content2 .tab-pane2 .btn {
+  font-family: Lato, sans-serif;
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+#sign2 .tab-content2 .tab-pane2 .btn .fa {
+  margin-right: 15px;
+}
+#sign2 .tab-content2 .tab-pane2 .btn.btn-facebook {
+  background-color: #dee8f7;
+  color: #08101c;
+}
+#sign2 .tab-content2 .tab-pane2 .btn.btn-linkedin {
+  background-color: #4875B4;
+  color: white;
+}
+#sign2 .tab-content2 .tab-pane2 .btn.btn-linkedin:hover {
+  background-color: #5f86bc;
+}
+#sign2 .tab-content2 .tab-pane2 .btn.btn-default {
+  background-color: #313945;
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+#sign2 .tab-content2 .tab-pane2 .btn.btn-default:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+#sign2 .tab-content2 .tab-pane2 form#signupform {
+  display: block;
+}
+#sign2 .tab-content2 .tab-pane2 form#loginform {
+  display: block;
+}
+#sign2 .tab-content2 .tab-pane2 form input.form-control {
+  background-color: transparent;
+  border-radius: 0;
+  border-color: transparent transparent rgba(255, 255, 255, 0.2) transparent;
+  box-shadow: none;
+  text-align: center;
+  color: #dee8f7;
+  font-size: 20px;
+}
+#sign2 .tab-content2 .tab-pane2 form input.form-control:nth-last-child(1) {
+  margin-bottom: 20px;
+}
+#sign2 .tab-content2 .tab-pane2 p {
+  margin-bottom: 20px;
+}
+#sign2 .tab-content2 .tab-pane2 p .fa {
+  margin-right: 5px;
+  color: #888;
+}
+

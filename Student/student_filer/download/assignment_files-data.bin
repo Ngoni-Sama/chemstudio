@@ -1,0 +1,38 @@
+Dynamic routing uses .RIP. Versions of RIP:
+				-Rip v1,v2,v3
+
+.Enhancement internet protocol
+
+.open shortest path first(OSPF)
+	-ospf v1,v2,(v3)->ipv6
+
+.Intermediary System to Intermediary System (IS-IS)
+.Border Gateway Protocol(BGP)
+
+R-1(config)#router rip
+R-1(config-router)#network 192.168.1.0
+R-1(config-router)#network 192.168.2.0
+
+-ip route
+-show ip protocols
+-show running-config
+-debug ip rip
+-R-2(config-router)#passive-interface fa0/0 ->(prevents forwading of
+	packets back to the interface)
+R-1(config)#no router rip-removes all rip protocols configured
+
+
+R-1(config)#router rip
+R-1(config-router)#version 2
+R-1(config-router)#no auto-summary
+R-1(config-router)#passive-interface fa0/0
+R-1(config-router)#network 192.168.1.0
+R-1(config-router)#network 192.168.2.0
+
+
+
+
+ip route 192.168.0.0 255.255.252.0 se0/0
+
+ip route 10.0.0.0 255.255.255.252 se0/0
+

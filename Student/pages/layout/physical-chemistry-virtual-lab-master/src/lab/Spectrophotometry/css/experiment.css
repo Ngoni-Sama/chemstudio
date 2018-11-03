@@ -1,0 +1,18 @@
+chart {
+	display: block;
+	width: 400px;
+	height: 200px;
+}
+#site-sidenav{
+	display:none;
+}
+#wells {
+	width: 100%;
+}
+#incubate {
+    white-space: inherit;
+    line-height: 25px;
+}
+#tickIcon {
+    color: green;
+}

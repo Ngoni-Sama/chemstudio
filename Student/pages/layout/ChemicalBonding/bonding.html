@@ -1,0 +1,502 @@
+<!doctype html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ionic & Covalent Bonding</title>
+  
+  <link rel="stylesheet" href="bonding.css">
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet"> 
+
+  <script src="https://use.typekit.net/ndg5ngh.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+</head>
+
+<body>
+
+  <section id="section1" class="on">
+    <div class="section-inner container">
+      <div class="header" style="margin-top:-140px;">
+        <h1>Choose highlighted elements from the periodic table to bond.</h1>
+      </div>
+      <div id="periodic-table">
+        <div class="col colOne">
+            <div class="el"><span>H</span></div> 
+            <div class="el"><span>Li</span></div> 
+            <div class="el on"><span>Na</span></div> 
+            <div class="el on"><span>K</span></div> 
+            <div class="el"><span>Rb</span></div> 
+            <div class="el"><span>Cs</span></div> 
+            <div class="el"><span>Fr</span></div> 
+        </div>
+        <div class="col colTwo">
+            <div class="el"><span>Be</span></div> 
+            <div class="el on"><span>Mg</span></div> 
+            <div class="el on"><span>Ca</span></div> 
+            <div class="el"><span>Sr</span></div> 
+            <div class="el"><span>Ba</span></div> 
+            <div class="el"><span>Ra</span></div> 
+        </div>
+        <div class="col colOverflow">
+          <div class="el"><span>...</span></div> 
+          <div class="el"><span>...</span></div> 
+          <div class="el"><span>...</span></div> 
+          <div class="el"><span>...</span></div> 
+        </div>
+        <div class="col colThree">
+            <div class="el"><span>Sc</span></div> 
+            <div class="el"><span>Y</span></div> 
+            <div class="el"><span>...</span></div> 
+            <div class="el"><span>...</span></div> 
+        </div>
+        <div class="col colThree">
+            <div class="el"><span>Ti</span></div> 
+            <div class="el"><span>Zr</span></div> 
+            <div class="el"><span>Hf</span></div> 
+            <div class="el"><span>Rf</span></div> 
+        </div>
+        <div class="col colThree">
+            <div class="el"><span>V</span></div> 
+            <div class="el"><span>Nb</span></div> 
+            <div class="el"><span>Ta</span></div> 
+            <div class="el"><span>Db</span></div> 
+        </div>
+        <div class="col colThree">
+            <div class="el"><span>Cr</span></div> 
+            <div class="el"><span>Mo</span></div> 
+            <div class="el"><span>W</span></div> 
+            <div class="el"><span>Sg</span></div> 
+        </div>
+        <div class="col colThree">
+            <div class="el"><span>Mn</span></div> 
+            <div class="el"><span>Tc</span></div> 
+            <div class="el"><span>Re</span></div> 
+            <div class="el"><span>Bh</span></div> 
+        </div>
+        <div class="col colThree">
+            <div class="el"><span>Fe</span></div> 
+            <div class="el"><span>Ru</span></div> 
+            <div class="el"><span>Os</span></div> 
+            <div class="el"><span>Hs</span></div> 
+        </div>
+        <div class="col colThree">
+            <div class="el"><span>Co</span></div> 
+            <div class="el"><span>Rh</span></div> 
+            <div class="el"><span>Ir</span></div> 
+            <div class="el"><span>Mt</span></div> 
+        </div>
+        <div class="col colThree">
+            <div class="el"><span>Ni</span></div> 
+            <div class="el"><span>Pd</span></div> 
+            <div class="el"><span>Pt</span></div> 
+            <div class="el"><span>Ds</span></div> 
+        </div>
+        <div class="col colThree">
+            <div class="el"><span>Cu</span></div> 
+            <div class="el"><span>Ag</span></div> 
+            <div class="el"><span>Au</span></div> 
+            <div class="el"><span>Rg</span></div> 
+        </div>
+        <div class="col colThree">
+            <div class="el"><span>Zn</span></div> 
+            <div class="el"><span>Cd</span></div> 
+            <div class="el"><span>Hg</span></div> 
+            <div class="el"><span>Uub</span></div> 
+        </div>
+        <div class="col colFour">
+            <div class="el"><span>B</span></div> 
+            <div class="el on"><span>Al</span></div> 
+            <div class="el"><span>Ga</span></div> 
+            <div class="el"><span>In</span></div> 
+            <div class="el"><span>Ti</span></div> 
+            <div class="el"><span>Uut</span></div> 
+        </div>
+        <div class="col colFour">
+            <div class="el"><span>C</span></div> 
+            <div class="el"><span>Si</span></div> 
+            <div class="el"><span>Ge</span></div> 
+            <div class="el"><span>Sn</span></div>
+            <div class="el"><span>Pb</span></div> 
+            <div class="el"><span>Fl</span></div>  
+        </div>
+        <div class="col colFour">
+            <div class="el on"><span>N</span></div> 
+            <div class="el"><span>P</span></div> 
+            <div class="el"><span>As</span></div> 
+            <div class="el"><span>Sb</span></div> 
+            <div class="el"><span>Bi</span></div> 
+            <div class="el"><span>Uup</span></div> 
+        </div>
+        <div class="col colFour">
+            <div class="el on"><span>O</span></div> 
+            <div class="el on"><span>S</span></div> 
+            <div class="el"><span>Se</span></div> 
+            <div class="el"><span>Te</span></div> 
+            <div class="el"><span>Po</span></div> 
+            <div class="el"><span>Lv</span></div> 
+        </div>
+        <div class="col colFour">
+            <div class="el on"><span>F</span></div> 
+            <div class="el on"><span>Cl</span></div> 
+            <div class="el"><span>Br</span></div> 
+            <div class="el"><span>I</span></div> 
+            <div class="el"><span>At</span></div> 
+            <div class="el"><span>Uus</span></div> 
+        </div>
+        <div class="col colFive">
+            <div class="el"><span>He</span></div> 
+            <div class="el"><span>Ne</span></div> 
+            <div class="el"><span>Ar</span></div> 
+            <div class="el"><span>Kr</span></div> 
+            <div class="el"><span>Xe</span></div> 
+            <div class="el"><span>Rn</span></div> 
+            <div class="el"><span>Uuo</span></div> 
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="section2">
+    <div class="atom-cols guess container">
+      <div class="column on" style="margin-top:-60px;">
+        <div class="selection-container">
+          <div class="atomheading">
+            <p>
+              <span class="name"><span class="placeholder">Element</span></span>
+              <span class="symbol"><span class="ionized"></span></span>
+            </p>
+            <span class="smalltitle element-type placeholder">Element Type <span class="count">Type</span></span>
+            <span class="smalltitle electronegativity placeholder">Electronegativity <span class="count">100</span></span>
+          </div>
+          <div class="atombox">
+            <div class="atom">
+
+              <div class="ebox">
+                <div id="element-1" class="element placeholder"><span></span></div>
+              </div>
+
+            </div>
+          </div>
+          <span class="ecks">&times;</span>
+        </div>
+      </div>
+      <div class="column" style="margin-top:-60px;">
+        <div class="selection-container">
+          <div class="atomheading">
+            <p>
+              <span class="name"><span class="placeholder">Element</span></span>
+              <span class="symbol"><span class="ionized"></span></span>
+            </p>
+            <span class="smalltitle element-type placeholder">Element Type <span class="count">Type</span></span>
+            <span class="smalltitle electronegativity placeholder">Electronegativity <span class="count">100</span></span>
+          </div>
+          <div class="atombox">
+            <div class="atom">
+
+              <div class="ebox">
+                <div id="element-2" class="element placeholder"><span></span></div>
+              </div>
+
+            </div>
+          </div>
+          <span class="ecks">&times;</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="section3">
+    <div class="container">
+      <div class="guesses">
+            
+        <h1>What type of bond is this combination likely to form?</h1>
+
+        <button id="guess-ionic" class="butn">Ionic Bond</button> <span class="h1">or</span> <button id="guess-covalent" class="butn">Covalent Bond</button>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="section4">
+    <div class="container">
+      <div class="guesses">
+
+        <h1>Based on your knowledge of each of these atoms, predict the number of each atom needed:</h1>
+
+        <div class="lbl" id="guess-1"><span id="element-1-label" class="h1">Element 1</span> <button id="guess-1-1" class="butn butn-lil">1</button> <button id="guess-1-2" class="butn butn-lil">2</button> <button id="guess-1-3" class="butn butn-lil">3</button></div>
+        
+        <div class="lbl" id="guess-2"><span id="element-2-label" class="h1">Element 2</span> <button id="guess-2-1" class="butn butn-lil">1</button> <button id="guess-2-2" class="butn butn-lil">2</button> <button id="guess-2-3" class="butn butn-lil">3</button></div>
+
+        <button id="guess" class="big butn notyet">Submit Answer</button>
+      
+      </div>
+    </div>
+  </section>
+
+  <section id="section5">
+    <h1><span class="container">
+      Correct! 
+      <button id="reset_all" class="reset btn active" title="Reset all selections to the default state">Reset</button>
+    </span></h1>
+    <div id="correctResults" class="container">
+
+      <div class="column on">
+        <div class="atombox">
+          <div class="atom">
+            <div class="ebox">
+              <div id="correct1"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="column on">
+        <div class="atombox">
+          <div class="atom">
+            <div class="ebox">
+              <div id="correct2"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="resultBottom">
+        <h1 id="correctName"></h1>
+      </div>
+      <!-- COVALENT BONDS -->
+      <aside class="Oxygen">
+        <div class="OO result-symbols">
+          <img src="img/Oxygen.svg" class="cb">
+        </div>
+      </aside>
+
+      <aside class="Sulfur">
+        <div class="SS result-symbols">
+          <img src="img/Sulfur.svg" class="cb">
+        </div>
+      </aside>
+
+      <aside class="Nitrogen">
+        <div class="NN result-symbols">
+          <img src="img/Nitrogen.svg" class="cb">
+        </div>
+      </aside>
+
+      <aside class="Chlorine-Monofluoride">
+        <div class="CLF result-symbols">
+          <img src="img/ChlorineMonofluoride.svg" class="cb">
+        </div>
+      </aside>
+
+      <aside class="Chlorine">
+        <div class="CL result-symbols">
+          <img src="img/Chlorine.svg" class="cb">
+        </div>
+      </aside>
+
+      <aside class="Fluorine">
+        <div class="F result-symbols">
+          <img src="img/Fluorine.svg" class="cb">
+        </div>
+      </aside>
+
+      <aside class="Oxygen-Dichloride">
+        <div class="OCL result-symbols">
+          <img src="img/OxygenDichloride.svg" class="cb">
+        </div>
+      </aside>
+
+      <aside class="Sulfur-Dichloride">
+        <div class="SCL result-symbols">
+          <img src="img/SulfurDichloride.svg" class="cb">
+        </div>
+      </aside>
+
+      <aside class="Oxygen-Difluoride">
+        <div class="FOF result-symbols">
+          <img src="img/OxygenDifluoride.svg" class="cb">
+        </div>
+      </aside>
+
+      <aside class="Sulfur-Difluoride">
+        <div class="FSF result-symbols">
+          <img src="img/SulfurDifluoride.svg" class="cb">
+        </div>
+      </aside>
+
+      <aside class="Nitrogen-Trifluoride">
+        <div class="NF result-symbols">
+          <img src="img/NitrogenTrifluoride.svg" class="cb">
+        </div>
+      </aside>
+
+      <aside class="Nitrogen-Trichloride">
+        <div class="NCL result-symbols">
+          <img src="img/NitrogenTrichloride.svg" class="cb">
+        </div>
+      </aside>
+
+      <!-- IONIC BONDS -->
+      <aside class="Sodium-Nitride">
+        <div class="NAN result-symbols">
+          <img src="img/SodiumNitride.svg">
+        </div>
+      </aside>
+
+      <aside class="Sodium-Oxide">
+        <div class="NAO result-symbols">
+          <img src="img/SodiumOxide.svg">
+        </div>
+      </aside>
+
+
+      <aside class="Sodium-Fluoride">
+        <div class="NAF result-symbols">
+          <img src="img/SodiumFluoride.svg">
+        </div>
+      </aside>
+
+      <aside class="Sodium-Sulfide">
+        <div class="NAS result-symbols">
+          <img src="img/SodiumSulfide.svg">
+        </div>
+      </aside>
+
+
+      <aside class="Sodium-Chloride">
+        <div class="NACL result-symbols">
+          <img src="img/SodiumChloride.svg">
+        </div>
+      </aside>
+
+      <aside class="Potassium-Nitride">
+        <div class="KN result-symbols">
+          <img src="img/PotassiumNitride.svg">
+        </div>
+      </aside>
+
+      <aside class="Potassium-Oxide">
+        <div class="KO result-symbols">
+          <img src="img/PotassiumOxide.svg">
+        </div>
+      </aside>
+
+      <aside class="Potassium-Fluoride">
+        <div class="KF result-symbols">
+          <img src="img/PotassiumFluoride.svg">
+        </div>
+      </aside>
+
+      <aside class="Potassium-Sulfide">
+        <div class="KS result-symbols">
+          <img src="img/PotassiumSulfide.svg">
+        </div>
+      </aside>
+
+      <aside class="Potassium-Chloride">
+        <div class="KCL result-symbols">
+          <img src="img/PotassiumChloride.svg">
+        </div>
+      </aside>
+
+      <aside class="Magnesium-Nitride">
+        <div class="MGN result-symbols">
+          <img src="img/MagnesiumNitride.svg">
+        </div>
+      </aside>
+
+      <aside class="Magnesium-Oxide">
+        <div class="MGO result-symbols">
+          <img src="img/MagnesiumOxide.svg">
+        </div>
+      </aside>
+
+      <aside class="Magnesium-Fluoride">
+        <div class="MGF result-symbols">
+          <img src="img/MagnesiumFluoride.svg">
+        </div>
+      </aside>
+
+      <aside class="Magnesium-Sulfide">
+        <div class="MGS result-symbols">
+          <img src="img/MagnesiumSulfide.svg">
+        </div>
+      </aside>
+
+      <aside class="Magnesium-Chloride">
+        <div class="MGCL result-symbols">
+          <img src="img/MagnesiumChloride.svg">
+        </div>
+      </aside>
+
+
+      <aside class="Calcium-Nitride">
+        <div class="CAN result-symbols">
+          <img src="img/CalciumNitride.svg">
+        </div>
+      </aside> 
+
+      <aside class="Calcium-Oxide">
+        <div class="CAO result-symbols">
+          <img src="img/CalciumOxide.svg">
+        </div>
+      </aside>  
+
+      <aside class="Calcium-Fluoride">
+        <div class="CAF result-symbols">
+          <img src="img/CalciumFluoride.svg">
+        </div>
+      </aside>
+
+      <aside class="Calcium-Sulfide">
+        <div class="CAS result-symbols">
+          <img src="img/CalciumSulfide.svg">
+        </div>
+      </aside> 
+
+      <aside class="Calcium-Chloride">
+        <div class="CAL result-symbols">
+          <img src="img/CalciumChloride.svg">
+        </div>
+      </aside>
+
+      <aside class="Aluminum-Nitride">
+        <div class="ALN result-symbols">
+          <img src="img/AluminumNitride.svg">
+        </div>
+      </aside> 
+
+      <aside class="Aluminum-Oxide">
+        <div class="ALO result-symbols">
+          <img src="img/AluminumOxide.svg">
+        </div>
+      </aside>
+
+      <aside class="Aluminum-Fluoride">
+        <div class="ALF result-symbols">
+          <img src="img/AluminumFluoride.svg">
+        </div>
+      </aside>
+
+      <aside class="Aluminum-Sulfide">
+        <div class="ALS result-symbols">
+          <img src="img/AluminumSulfide.svg">
+        </div>
+      </aside>
+
+      <aside class="Aluminum-Chloride">
+        <div class="ALC result-symbols">
+          <img src="img/AluminumChloride.svg">
+        </div>
+      </aside>
+    </div>
+  </section>
+
+
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/interact.js/1.2.4/interact.min.js"></script>
+  <script src="fittext.js"></script>
+  <script src="elementData.js"></script>
+
+</body>
+</html>
+
