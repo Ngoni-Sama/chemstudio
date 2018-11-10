@@ -214,16 +214,11 @@ button:hover {
                 </li>
                
                   <li class="user-footer">
-                  <!-- <div class="pull-left">
-                    <a href="#" class="btn btn-default btn-flat">Profile</a>
-                  </div> -->
+                 
                   <div class="pull-right">
                     <a href="index.php?logout='1'" class="btn btn-default btn-flat">Sign out</a>
                   </div>
                 </li>
-                <li>
-                    <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
-                  </li>
               </ul>
             </li>
           </ul>
@@ -244,10 +239,7 @@ button:hover {
         <!-- <li class="header">WORK SPACE</li>
         <li class="active treeview"> -->
           <a href="#">
-           <!-- </i> <span>LAB SPACE</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span> -->
+           
           </a>
           <ul class="treeview-menu">
             <li class="active"><a href="index.html"><i class="fa fa-circle-o"></i>LAB SPACE</a></li>
@@ -377,10 +369,6 @@ frameborder="0">
   </div>
  
 
- 
-  <!-- /.control-sidebar -->
-  <!-- Add the sidebar's background. This div must be placed
-       immediately after the control sidebar -->
   <div class="control-sidebar-bg"></div>
 </div>
 <!-- ./wrapper -->

@@ -1,0 +1,41 @@
+1.Daniel  
+
+- week12(assembly language) 
+- week2           
+- week3           
+- lab report2           
+- lab report3
+
+2.Michelle 
+
+- week12(java)
+- week12(C)           
+- week4           
+- lab report5
+
+3.Innocent 
+
+- week12(C++)
+- week5          
+- week6           
+- lab report4
+
+4.Gabriel  
+
+- week12(machine language)
+- week1           
+- week8           
+- week7           
+- lab report1
+
+5.Emmanuel 
+
+- week12(arduino)
+- week9           
+- week10 
+- week11         
+- lab report6
+
+* Week12(assembly language) means you implement all
+  sub-categories in week12 in assembly language.Same
+  case to everyone.

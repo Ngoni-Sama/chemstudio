@@ -1,0 +1,4 @@
+<br />
+<b>Warning</b>:  filesize(): stat failed for ./download/code.docx in <b>C:\xampp\htdocs\ChemStudio\Teacher\teacher_filer\download.php</b> on line <b>14</b><br />
+<br />
+<b>Warning</b>:  readfile(./download/code.docx): failed to open stream: No such file or directory in <b>C:\xampp\htdocs\ChemStudio\Teacher\teacher_filer\download.php</b> on line <b>27</b><br />

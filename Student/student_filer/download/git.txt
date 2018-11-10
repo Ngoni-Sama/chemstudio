@@ -1,0 +1,6 @@
+git init
+git add .
+git status
+git commit -am "First Commit"
+git clone https://Username03@bitbucket.org/Username03/code_igniter_progress.git
+git push -u origin master
