@@ -37,7 +37,7 @@
                         </div>
                         <h3><span id="typed"></span></h3>
                         <h4>Begin Now as a Student or Teacher</h4>
-                        <a href="Login/StudentOrTeacher.php" class="btn view-demo" >Get Started</a>
+                        <a href="Student/index.php" class="btn view-demo" >Get Started</a>
                     </div>
                 </div>
             </div>
